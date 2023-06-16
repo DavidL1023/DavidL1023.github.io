@@ -1,2 +1,4 @@
-# my_dev_site
-Site to showcase myself
+# David's Dev Site
+
+about me, project showcase
+contact info, links to github, linkedin, etc
