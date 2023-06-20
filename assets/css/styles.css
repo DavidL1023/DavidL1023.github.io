@@ -1,0 +1,74 @@
+/* Reset default browser styles */
+body,
+h1,
+h2,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set basic styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Aligns items horizontally */
+  align-items: center; /* Aligns items vertically */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin: 14px
+}
+
+h5 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+font-size: large;
+  margin-right: 40px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
