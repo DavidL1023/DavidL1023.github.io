@@ -1,74 +1,83 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 /* Reset default browser styles */
-body,
-h1,
-h2,
-ul,
-li {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background-color: #24252A;
 }
 
-/* Set basic styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  background-color: #f0f0f0;
-  color: #333;
+/* Variables */
+:root {
+  --primary-color: #50330C;
+  --secondary-color: #68BA84;
+  --text-color: #edf0f1;
+  --hover-color: #c7842d;
+  --font-main: "Montserrat", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
 }
 
-/* Header styles */
-header {
-  background-color: #333;
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between; /* Aligns items horizontally */
-  align-items: center; /* Aligns items vertically */
-}
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  margin: 14px
-}
-
-h5 {
-    margin-bottom: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-font-size: large;
-  margin-right: 40px;
-}
-
-nav ul li a {
-  color: #fff;
+/* Header */
+li, a, button {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+  font-size: 18px;
+  color: var(--text-color);
   text-decoration: none;
 }
 
-/* Main content styles */
-main {
-  padding: 20px;
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 32px 5%;
 }
 
-section {
-  margin-bottom: 30px;
+.logo {
+  cursor: pointer;
+  width: 12rem;
+  height: auto;
+  margin-right: 10%;
 }
 
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.nav__links {
+  list-style: none;
 }
 
-/* Footer styles */
-footer {
-  background-color: #333;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
+.nav__links li {
+  display: inline-block;
+  padding: 0px 25px;
 }
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: var(--hover-color)
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(199, 132, 45, 1);
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(199, 132, 45, 0.8);
+}
+
+
+.ctaEmail {
+  margin-left: auto;
+}
+
+/* Body */
