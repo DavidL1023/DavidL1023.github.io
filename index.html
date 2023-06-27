@@ -5,22 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David's Dev Site</title>
   <link rel="stylesheet" href="assets\css\styles.css"> <!-- Link to CSS file -->
+<!-- fontawesome stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
   <!-- Header -->
   <header>
-    <img class="logo" src="assets\images\logo.svg" alt="Logo">
-    <!-- Navigation -->
-    <nav>
-      <ul class="nav__links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a class="ctaEmail" href="#"><button>dev.david@gmail.com</button></a>
+
+    <div class="navbar">
+      <img class="logo"  src="assets\images\logo.svg" alt="Logo">
+      <!-- Navigation bar -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="email-btn" href="#contact"><button>dev.david@gmail.com</button></a>
+      
+      <div class="menu-icon">
+        <!-- Dropdown menu symbol -->
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </div>
+
+    </div>
+
+    <div class="dropdown-menu">
+      <!-- Dropown menu items -->
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <a class="email-btn" href="#contact"><button>dev.david@gmail.com</button></a>
+    </div>
+
+    <script>
+      const toggleBtn = document.querySelector('.menu-icon');
+      const toggleBtnIcon = document.querySelector('.menu-icon i');
+      const dropDownMenu = document.querySelector('.dropdown-menu');
+
+      toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.classList = isOpen 
+        ? 'fa-solid fa-xmark fa-lg'
+        : 'fa-solid fa-bars fa-lg';
+      }
+
+    </script>
 
   </header>
 

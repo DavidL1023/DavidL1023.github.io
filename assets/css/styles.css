@@ -1,83 +1,166 @@
-/* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* open sans font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
 /* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #24252A;
+  font-family: var(--font-main);
 }
 
 /* Variables */
 :root {
   --primary-color: #50330C;
   --secondary-color: #68BA84;
-  --text-color: #edf0f1;
-  --hover-color: #c7842d;
-  --font-main: "Montserrat", sans-serif;
+  --text-color: white;
+  --hover-color: orange;
+  --font-main: "Open Sans", sans-serif;
   --font-weight-light: 300;
+  --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-semibold: 600;
+  --font-weight-semi-bold: 600;
 }
 
 /* Header */
 li, a, button {
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-medium);
   font-size: 18px;
   color: var(--text-color);
+  font-weight: var(--font-weight-regular);
   text-decoration: none;
 }
 
-header {
+.navbar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  position: relative;
   align-items: center;
-  padding: 32px 5%;
+  padding: 25px 10%;
 }
 
 .logo {
-  cursor: pointer;
   width: 12rem;
   height: auto;
-  margin-right: 10%;
+  cursor: pointer;
 }
 
-.nav__links {
+.nav-links {
   list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
-.nav__links li {
+.nav-links li {
   display: inline-block;
-  padding: 0px 25px;
 }
 
-.nav__links li a {
-  transition: all 0.3s ease 0s;
+a {
+  transition: all 0.2s ease 0s;
 }
 
-.nav__links li a:hover {
+a:hover {
   color: var(--hover-color)
 }
 
-button {
-  padding: 9px 25px;
-  background-color: rgba(199, 132, 45, 1);
+.email-btn button {
+  padding: 0.5rem 0.8rem;
+  background-color: rgba(255, 165, 0, 1);
   border: none;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  font-weight: var(--font-weight-semi-bold);
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 
-button:hover {
-  background-color: rgba(199, 132, 45, 0.8);
+.email-btn button:hover {
+  scale: 1.05;
 }
 
+.email-btn button:active {
+  background-color: rgba(255, 165, 0, 0.8);
+  scale: 0.95;
+}
 
-.ctaEmail {
-  margin-left: auto;
+.menu-icon {
+  display: none;
+}
+
+.menu-icon {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  height: 0px;
+  right: 2rem;
+  width: 300px;
+  background: rgba(255, 165, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+  height: 290px;
+}
+
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(255, 165, 0, 0.2);
+  cursor: pointer;
+}
+
+.dropdown-menu .email-btn button {
+  width: 100%;
+  max-width: 16rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+@media(max-width: 992px) { /* responsive menu */
+  .navbar .nav-links,
+  .navbar .email-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+@media(max-width: 576px) { /* responsive menu */
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
 }
 
 /* Body */
+body {
+  background: url(https://images.unsplash.com/photo-1598624669879-6a36aa5c1c30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80);
+  backdrop-filter: blur(5px);
+  font-family: var(--font-main);
+  color: var(--text-color);
+  font-weight: var(--font-weight-regular);
+  font-size: 18px;
+  line-height: 1.5;
+}
