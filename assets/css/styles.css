@@ -84,13 +84,7 @@ a:hover {
 }
 
 .menu-icon {
-  display: none;
-}
-
-.menu-icon {
-  color: white;
   cursor: pointer;
-  display: none;
 }
 
 .dropdown-menu {
