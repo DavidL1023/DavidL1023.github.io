@@ -1,7 +1,6 @@
 const toggleBtnMenu = document.querySelector('.navbar .bars');
 const toggleBtnClose = document.querySelector('.navbar .cross');
 const dropDownMenu = document.querySelector('.dropdown-menu');
-const toggleBtnIcon = document.querySelector('.navbar .bars img');
 
 // Toggle the dropdown menu
 function toggleDropdownMenu() {
@@ -10,9 +9,9 @@ function toggleDropdownMenu() {
 
   if (isOpen) {
     toggleBtnMenu.style.display = 'none'; // Hide the bars icon
-    toggleBtnClose.style.display = 'inline-block'; // Show the cross icon
+    toggleBtnClose.style.display = 'block'; // Show the cross icon
   } else {
-    toggleBtnMenu.style.display = 'inline-block'; // Show the bars icon
+    toggleBtnMenu.style.display = 'block'; // Show the bars icon
     toggleBtnClose.style.display = 'none'; // Hide the cross icon
   }
 }
@@ -25,7 +24,7 @@ const menuItems = document.querySelectorAll('.dropdown-menu a');
 for (let i = 0; i < menuItems.length; i++) {
   menuItems[i].addEventListener('click', function() {
     dropDownMenu.classList.remove('open');
-    toggleBtnMenu.style.display = 'inline-block'; // Show the bars icon
+    toggleBtnMenu.style.display = 'block'; // Show the bars icon
     toggleBtnClose.style.display = 'none'; // Hide the cross icon
   });
 }
@@ -40,7 +39,7 @@ document.addEventListener('click', function(event) {
 
   if (!isClickInsideMenu && !isClickOnToggleButton) {
     dropDownMenu.classList.remove('open');
-    toggleBtnMenu.style.display = 'inline-block'; // Show the bars icon
+    toggleBtnMenu.style.display = 'block'; // Show the bars icon
     toggleBtnClose.style.display = 'none'; // Hide the cross icon
   }
 });
