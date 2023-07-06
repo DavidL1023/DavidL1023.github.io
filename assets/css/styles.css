@@ -83,8 +83,15 @@ a:hover {
   scale: 0.95;
 }
 
-.menu-icon {
+.navbar .bars {
   cursor: pointer;
+  width: 1.5rem;
+}
+
+.navbar .cross {
+  cursor: pointer;
+  display: none;
+  width: 1.5rem;
 }
 
 .dropdown-menu {
@@ -127,7 +134,7 @@ a:hover {
     display: none;
   }
 
-  .menu-icon {
+  .navbar .bars {
     display: block;
   }
 
