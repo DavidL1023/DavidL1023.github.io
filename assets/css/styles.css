@@ -30,12 +30,16 @@ li, a, button {
   text-decoration: none;
 }
 
-.navbar {
+#navbar {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   align-items: center;
-  padding: 25px 10%;
+  padding: 25px 8%;
+  z-index: 100;
 }
 
 .logo {
@@ -59,8 +63,14 @@ a {
 }
 
 a:hover {
-  color: var(--hover-color)
+  color: var(--hover-color);
 }
+
+#navbar .nav-links > .active > a {
+  color: var(--hover-color);
+}
+
+/* do the same for dropdown */
 
 .email-btn button {
   padding: 0.5rem 0.8rem;
@@ -83,12 +93,12 @@ a:hover {
   scale: 0.95;
 }
 
-.navbar .bars {
+#navbar .bars {
   cursor: pointer;
   width: 1.5rem;
 }
 
-.navbar .cross {
+#navbar .cross {
   cursor: pointer;
   display: none;
   width: 1.5rem;
@@ -97,7 +107,7 @@ a:hover {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 70px;
   height: 0px;
   right: 2rem;
   width: 300px;
@@ -129,19 +139,19 @@ a:hover {
 }
 
 @media (min-width: 993px) { /* Large screen (no menu button) */
-  .navbar .bars,
-  .navbar .cross {
+  #navbar .bars,
+  #navbar .cross {
     display: none;
   }
 }
 
 @media(max-width: 992px) { /* medium screen */
-  .navbar .nav-links,
-  .navbar .email-btn {
+  #navbar .nav-links,
+  #navbar .email-btn {
     display: none;
   }
 
-  .navbar .bars {
+  #navbar .bars {
     display: block;
   }
 
@@ -160,6 +170,8 @@ a:hover {
 /* Body */
 body {
   background: url(https://images.unsplash.com/photo-1598624669879-6a36aa5c1c30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80);
+  background-size: cover;
+  background-position: center;
   backdrop-filter: blur(20px);
   color: var(--text-color);
 }

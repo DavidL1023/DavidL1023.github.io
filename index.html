@@ -15,16 +15,16 @@
   <!-- Header -->
   <header>
 
-    <div class="navbar">
+    <div id="navbar">
       <img class="logo" src="assets\images\logo.svg" alt="Logo">
       <!-- Navigation bar -->
       <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-links" id="menu">
+          <li data-menuanchor="home"><a href="#home">Home</a></li>
+          <li data-menuanchor="about"><a href="#about">About</a></li>
+          <li data-menuanchor="skills"><a href="#skills">Skills</a></li>
+          <li data-menuanchor="projects"><a href="#projects">Projects</a></li>
+          <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <a class="email-btn" href="#contact"><button>dev.david@gmail.com</button></a>
@@ -65,12 +65,6 @@
 
       </div>
 
-      <div class="section" id="experience">
-        <h2>Experience</h2>
-        <!-- Experience information -->
-
-      </div>
-
       <div class="section" id="skills">
         <h2>Skills</h2>
         <!-- Skills information -->
@@ -78,8 +72,15 @@
       </div>
 
       <div class="section" id="projects">
-        <h2>Projects</h2>
+        
         <!-- Projects information -->
+        <div class = slide data-anchor="slide1">
+          <h2>Project 1</h2>
+        </div>
+        
+        <div class = slide data-anchor="slide2">
+          <h2>Project 2</h2>
+        </div>
 
       </div>
 
@@ -94,13 +95,21 @@
 
   <!-- Scripts -->
   <script type="text/javascript" src="assets\js\dropdownMenu.js"></script>
+  <script type="text/javascript" src="assets\js\activeAnchorSelector.js"></script>
 
   <!-- Initialize fullpage -->
   <script>
     new fullpage('#fullpage', {
       //options here
-      autoScrolling:true,
-      scrollHorizontally: true
+      paddingTop: '25px',
+      anchors:['home', 'about', 'skills', 'projects', 'contact'],
+      menu: '#menu',
+      showActiveTooltip: true,
+      loopBottom: true,
+      loopTop: true,
+      loopHorizontal: true,
+      fixedElements: '#navbar',
+      
     });
   </script>
 

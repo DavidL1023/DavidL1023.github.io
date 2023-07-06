@@ -1,5 +1,7 @@
 # David's Dev Site
-about me, project showcase
+about me, project horizontal scroll
+when I scroll down, I want there to be an animation of colors in the back that
+shift around
 contact info, links to github, linkedin, etc
 
 # See me here
