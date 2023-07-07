@@ -1,5 +1,5 @@
-const toggleBtnMenu = document.querySelector('.navbar .bars');
-const toggleBtnClose = document.querySelector('.navbar .cross');
+const toggleBtnMenu = document.querySelector('#navbar .bars');
+const toggleBtnClose = document.querySelector('#navbar .cross');
 const dropDownMenu = document.querySelector('.dropdown-menu');
 
 // Toggle the dropdown menu
