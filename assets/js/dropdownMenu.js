@@ -8,11 +8,11 @@ function toggleDropdownMenu() {
   const isOpen = dropDownMenu.classList.contains('open');
 
   if (isOpen) {
-    toggleBtnMenu.style.display = 'none'; // Hide the bars icon
-    toggleBtnClose.style.display = 'block'; // Show the cross icon
+    toggleBtnMenu.style.display = 'none'
+    toggleBtnClose.style.display = 'block';
   } else {
-    toggleBtnMenu.style.display = 'block'; // Show the bars icon
-    toggleBtnClose.style.display = 'none'; // Hide the cross icon
+    toggleBtnMenu.style.display = 'block';
+    toggleBtnClose.style.display = 'none';
   }
 }
 
@@ -24,8 +24,8 @@ const menuItems = document.querySelectorAll('.dropdown-menu a');
 for (let i = 0; i < menuItems.length; i++) {
   menuItems[i].addEventListener('click', function() {
     dropDownMenu.classList.remove('open');
-    toggleBtnMenu.style.display = 'block'; // Show the bars icon
-    toggleBtnClose.style.display = 'none'; // Hide the cross icon
+    toggleBtnMenu.style.display = 'block';
+    toggleBtnClose.style.display = 'none';
   });
 }
 
@@ -36,10 +36,27 @@ document.addEventListener('click', function(event) {
   const isClickOnToggleButton =
     toggleBtnMenu.contains(targetElement) ||
     toggleBtnClose.contains(targetElement);
+  var windowWidth = window.innerWidth
 
-  if (!isClickInsideMenu && !isClickOnToggleButton) {
+  if (!isClickInsideMenu && !isClickOnToggleButton && windowWidth < 1200) {
     dropDownMenu.classList.remove('open');
-    toggleBtnMenu.style.display = 'block'; // Show the bars icon
-    toggleBtnClose.style.display = 'none'; // Hide the cross icon
+    toggleBtnMenu.style.display = 'block'; 
+    toggleBtnClose.style.display = 'none';
+  }
+});
+
+// Hide or show menu icons depending on window width
+window.addEventListener('resize', function() {
+  dropDownMenu.classList.remove('open');
+  var windowWidth = window.innerWidth;
+    
+  //Large screen (no menu button)
+  if (windowWidth >= 1200) {
+    toggleBtnMenu.style.display = 'none';
+    toggleBtnClose.style.display = 'none';
+  //medium screen
+  } else if (windowWidth <= 1199) {
+    toggleBtnMenu.style.display = 'block';
+    toggleBtnClose.style.display = 'none';
   }
 });

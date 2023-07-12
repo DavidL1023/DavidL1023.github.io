@@ -39,7 +39,6 @@ li, a, button {
   right: 0;
   align-items: center;
   padding: 25px 8%;
-  z-index: 100;
 }
 
 .logo {
@@ -51,7 +50,7 @@ li, a, button {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 3.5rem;
 }
 
 .nav-links li {
@@ -95,13 +94,13 @@ a:hover {
 
 #navbar .bars {
   cursor: pointer;
-  width: 1.5rem;
+  width: 1.3rem;
 }
 
 #navbar .cross {
   cursor: pointer;
   display: none;
-  width: 1.5rem;
+  width: 1.3rem;
 }
 
 .dropdown-menu {
@@ -116,6 +115,7 @@ a:hover {
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 100;
 }
 
 .dropdown-menu.open {
@@ -138,14 +138,14 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-@media (min-width: 993px) { /* Large screen (no menu button) */
+@media (min-width: 1200px) { /* Large screen (no menu button) */
   #navbar .bars,
   #navbar .cross {
     display: none;
   }
 }
 
-@media(max-width: 992px) { /* medium screen */
+@media(max-width: 1199px) { /* medium screen */
   #navbar .nav-links,
   #navbar .email-btn {
     display: none;
@@ -160,7 +160,7 @@ a:hover {
   }
 }
 
-@media(max-width: 576px) { /* small screen */
+@media(max-width: 650px) { /* small screen */
   .dropdown-menu {
     left: 2rem;
     width: unset;
