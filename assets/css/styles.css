@@ -1,5 +1,5 @@
 /* open sans font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 /* Reset default browser styles */
 * {
@@ -15,7 +15,7 @@
   --secondary-color: #68BA84;
   --text-color: white;
   --hover-color: orange;
-  --font-main: "Open Sans", sans-serif;
+  --font-main: "Poppins", sans-serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -24,7 +24,7 @@
 
 /* Header */
 li, a, button {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--text-color);
   font-weight: var(--font-weight-regular);
   text-decoration: none;
@@ -38,8 +38,8 @@ li, a, button {
   left: 0;
   right: 0;
   align-items: center;
-  padding: 25px 8%;
-}
+  padding: 35px 5%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.500) 0%, rgba(0, 0, 0, 0) 100%);}
 
 .logo {
   width: 12rem;
@@ -114,12 +114,12 @@ a:hover {
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 100;
 }
 
 .dropdown-menu.open {
-  height: 280px;
+  height: 285px;
 }
 
 .dropdown-menu li {
@@ -169,9 +169,8 @@ a:hover {
 
 /* Body */
 body {
-  background: url(https://images.unsplash.com/photo-1598624669879-6a36aa5c1c30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80);
+  background-image: url('/assets/images/bg1.jpg');
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(20px);
   color: var(--text-color);
 }
