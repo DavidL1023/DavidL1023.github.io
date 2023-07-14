@@ -291,6 +291,7 @@ Not supports in Firefox and IE */
     z-index: 9999999;
     position: absolute;
     bottom: 0;
+    display: none;
 }
 .fp-warning,
 .fp-watermark a{
@@ -304,6 +305,7 @@ Not supports in Firefox and IE */
     display: inline-block;
     border-radius: 3px;
     margin: 12px;
+    display: none;
 }
 .fp-noscroll .fp-overflow{
     overflow: hidden;
