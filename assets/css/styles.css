@@ -174,12 +174,12 @@ body {
 /* Main */
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: var(--font-weight-semi-bold);
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: var(--font-weight-medium);
 }
 
