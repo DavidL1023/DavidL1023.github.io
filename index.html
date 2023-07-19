@@ -50,23 +50,39 @@
   <!-- Main -->
   <main>
 
+    <div class="side-button-container">
+      <a href="https://github.com/DavidL1023" class="side-button">
+        <img src="assets\images\github-mark.svg"
+          onmouseover="this.src='assets/images/github-mark-orange.svg';" onmouseout="this.src='assets/images/github-mark.svg';"
+          alt="Github">
+      </a>
+      <a href="https://www.linkedin.com/in/david-lacava-1261bb272/" class="side-button">
+        <img src="assets\images\linkedin-mark.svg" 
+          onmouseover="this.src='assets/images/linkedin-mark-orange.svg';" onmouseout="this.src='assets/images/linkedin-mark.svg';"
+          alt="LinkedIn">
+      </a>
+    </div>
+
+
     <div id="fullpage">
       <!-- Home view -->
       <div class="section centered">
-        <h3 class="enter-animation">Software Developer Game Ethusiast</h3>
-        <h1 class="enter-animation">DevDavid</h1>
-        <p class="enter-animation">Current student of the University of Connecticut, <br>
+        <h3 class="fade-in">Software Developer Game Ethusiast</h3>
+        <h1 class="scroll-up">
+          <span style="color: orange; font-weight: 300;">Dev</span>David
+        </h1>
+        <p class="scroll-up offwhite">Current student of the University of Connecticut, <br>
           2024 Graduate studying Computer Science.</p>
       </div>
     
       <div class="section centered">
-        <h1>About</h1>
+        <h1 class="fade-in">About</h1>
         <!-- About information -->
 
       </div>
 
       <div class="section centered">
-        <h1>Skills</h1>
+        <h1 class="fade-in">Skills</h1>
         <!-- Skills information -->
 
       </div>
@@ -74,18 +90,18 @@
       <div class="section centered">
         
         <!-- Projects information -->
-        <div class="slide centered" data-anchor="slide1">
-          <h1>Project 1</h1>
+        <div class="slide centered">
+          <h1 class="fade-in">Project 1</h1>
         </div>
         
-        <div class="slide centered" data-anchor="slide2">
-          <h1>Project 2</h1>
+        <div class="slide centered">
+          <h1 class="fade-in">Project 2</h1>
         </div>
 
       </div>
 
       <div class="section centered">
-        <h1>Contact</h1>
+        <h1 class="fade-in">Contact</h1>
         <!-- Contact information -->
         
       </div>
@@ -94,6 +110,7 @@
   </main>
 
   <!-- Scripts -->
+  <script type="text/javascript" src="assets\js\navbarSlideDown.js"></script>
   <script type="text/javascript" src="assets\js\dropdownMenu.js"></script>
 
   <!-- Initialize fullpage -->
@@ -104,7 +121,9 @@
       anchors:['home', 'about', 'skills', 'projects', 'contact'],
       menu: '#navbar .menu',
       fixedElements: '#navbar',
-      scrollingSpeed: 1100
+      scrollingSpeed: 1100,
+      scrollOverflow: false,
+      navigation: true,
     });
   </script>
 

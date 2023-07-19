@@ -64,11 +64,15 @@ html.fp-enabled,
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
+.fp-controlArrow:hover {
+    scale: 1.1;
+    transition: all 0.3s ease 0s;
+}
 .fp-prev{
-    left: 15px;
+    left: 60px;
 }
 .fp-next{
-    right: 15px;
+    right: 60px;
 }
 .fp-arrow{
     width: 0;
@@ -77,11 +81,11 @@ html.fp-enabled,
 }
 .fp-arrow.fp-prev {
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-color: transparent #f8f8f8 transparent transparent;
 }
 .fp-arrow.fp-next {
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    border-color: transparent transparent transparent #f8f8f8;
 }
 .fp-notransition {
     -webkit-transition: none !important;
@@ -162,7 +166,7 @@ html.fp-enabled,
     height: 4px;
     width: 4px;
     border: 0;
-    background: #333;
+    background: ghostwhite;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;

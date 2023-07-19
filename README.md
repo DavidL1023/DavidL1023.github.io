@@ -1,11 +1,10 @@
 # David's Dev Site
-about me, project horizontal scroll
-when I scroll down, I want there to be an animation of colors in the back that
-shift around
-contact info, links to github, linkedin, etc
+change size of text/layout for mobile
 
 https://www.youtube.com/watch?v=1wfeqDyMUx4
 
+fullpage try and lazy load the page content on scroll
+https://codepen.io/tutsplus/pen/dMvJaO
 
 # See me here
 [Website](https://davidl1023.github.io/)
