@@ -106,7 +106,7 @@ a:hover {
   height: 0px;
   right: 2rem;
   width: 300px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
