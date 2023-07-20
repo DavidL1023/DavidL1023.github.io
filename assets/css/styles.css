@@ -213,22 +213,26 @@ a:hover {
 h1 {
   font-size: 4em;
   font-weight: var(--font-weight-semi-bold);
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
   font-size: 3em;
   font-weight: var(--font-weight-medium);
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 h3 {
   font-size: 1.5em;
   font-weight: var(--font-weight-regular);
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 p {
   font-size: 1em;
   font-weight: var(--font-weight-light);
   line-height: 1.5;
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 .offwhite {
@@ -257,19 +261,38 @@ p {
   }
 }
 
-.scroll-up {
-  animation-name: scroll-up;
+.slide-up {
+  animation-name: slide-up;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
-@keyframes scroll-up {
+@keyframes slide-up {
   0% {
     opacity: 0;
     transform: translateY(50px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blur-in-slide-up {
+  animation-name: blur-in-slide-up;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blur-in-slide-up {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
     transform: translateY(0);
   }
 }

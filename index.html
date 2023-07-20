@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David's Dev Site</title>
   <link rel="stylesheet" href="assets\css\styles.css"> <!-- Link to CSS file -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!-- jQuery -->
 
 <!-- fullPage -->
 <link rel="stylesheet" type="text/css" href="bower_components\fullpage.js\dist\fullpage.css" />
@@ -68,40 +69,44 @@
       <!-- Home view -->
       <div class="section centered">
         <h3 class="fade-in">Software Developer Game Ethusiast</h3>
-        <h1 class="scroll-up">
+        <h1 class="slide-up">
           <span style="color: orange; font-weight: 300;">Dev</span>David
         </h1>
-        <p class="scroll-up offwhite">Current student of the University of Connecticut, <br>
+        <p class="slide-up offwhite">Current student of the University of Connecticut, <br>
           2024 Graduate studying Computer Science.</p>
       </div>
     
-      <div class="section centered">
-        <h1 class="fade-in">About</h1>
+      <div class="section second centered">
+        <h1 class="is-animated">About</h1>
         <!-- About information -->
 
       </div>
 
-      <div class="section centered">
-        <h1 class="fade-in">Skills</h1>
+      <div class="section third centered">
+        <h1 class="is-animated">Skills</h1>
         <!-- Skills information -->
 
       </div>
 
-      <div class="section centered">
+      <div class="section fourth centered">
         
         <!-- Projects information -->
         <div class="slide centered">
-          <h1 class="fade-in">Project 1</h1>
+          <h1 class="is-animated">Project <br> Introduction</h1>
         </div>
         
         <div class="slide centered">
-          <h1 class="fade-in">Project 2</h1>
+          <h1>Project 1</h1>
+        </div>
+
+        <div class="slide centered">
+          <h1>Project 2</h1>
         </div>
 
       </div>
 
-      <div class="section centered">
-        <h1 class="fade-in">Contact</h1>
+      <div class="section fifth centered">
+        <h1 class="is-animated">Contact</h1>
         <!-- Contact information -->
         
       </div>
@@ -112,20 +117,9 @@
   <!-- Scripts -->
   <script type="text/javascript" src="assets\js\navbarSlideDown.js"></script>
   <script type="text/javascript" src="assets\js\dropdownMenu.js"></script>
-
-  <!-- Initialize fullpage -->
-  <script>
-    new fullpage('#fullpage', {
-      //options here
-      paddingTop: '25px',
-      anchors:['home', 'about', 'skills', 'projects', 'contact'],
-      menu: '#navbar .menu',
-      fixedElements: '#navbar',
-      scrollingSpeed: 1100,
-      scrollOverflow: false,
-      navigation: true,
-    });
-  </script>
+  <!-- Animations and fullpage initialization -->
+  <script type="text/javascript" src="assets\js\animations.js"></script>
+  <!-- jquery type -->
 
 </body>
 </html>
