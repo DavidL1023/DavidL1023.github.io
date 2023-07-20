@@ -8,5 +8,6 @@ https://codepen.io/tutsplus/pen/dMvJaO
 # See me here
 [Website](https://davidl1023.github.io/)
 
-# Dependencies
+# Using
 [FullPage.js](https://github.com/alvarotrigo/fullPage.js)
+[jQuery](https://jquery.com/)
