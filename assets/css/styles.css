@@ -180,7 +180,7 @@ a:hover {
 .scroll-progress {
   position: fixed;
   top: 30%;
-  right: 40px;
+  right: 2%;
   width: 3px;
   height: 0rem;
   background-color: orange;
@@ -191,7 +191,7 @@ a:hover {
 .scroll-progress-backdrop {
   position: fixed;
   top: 30%;
-  right: 40px;
+  right: 2%;
   width: 3px;
   height: 25rem;
   background-color: ghostwhite;
@@ -253,6 +253,44 @@ p {
   font-weight: var(--font-weight-light);
   line-height: 1.5;
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
+}
+
+/* Styles for mid-sized devices (screen width from 768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 3em;    
+  }
+  
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+/* Styles for mobile devices (screen width up to 767px) */
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.7em;
+  }
+  
+  h2 {
+    font-size: 2.3em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
 }
 
 .offwhite {

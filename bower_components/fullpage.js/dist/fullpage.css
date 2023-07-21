@@ -65,14 +65,14 @@ html.fp-enabled,
     transform: translate3d(0,0,0);
 }
 .fp-controlArrow:hover {
-    scale: 1.1;
+    scale: 1.15;
     transition: all 0.3s ease 0s;
 }
 .fp-prev{
-    left: 60px;
+    left: 5%;
 }
 .fp-next{
-    right: 60px;
+    right: 5%;
 }
 .fp-arrow{
     width: 0;
@@ -86,6 +86,17 @@ html.fp-enabled,
 .fp-arrow.fp-next {
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #f8f8f8;
+}
+/* Styles for mobile devices (screen width up to 767px) */
+/* I cant make it dissapear, so workaround is make it fly off the screen */
+@media (max-width: 800px) {
+    .fp-arrow.fp-prev {
+        left: 100vh;
+    }
+    
+    .fp-arrow.fp-next {
+        right: 100vh;
+    }
 }
 .fp-notransition {
     -webkit-transition: none !important;
@@ -163,8 +174,8 @@ html.fp-enabled,
     border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
+    height: 6px;
+    width: 6px;
     border: 0;
     background: ghostwhite;
     left: 50%;
