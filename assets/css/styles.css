@@ -177,6 +177,26 @@ a:hover {
 }
 
 /* Main */
+.scroll-progress {
+  position: fixed;
+  top: 30%;
+  right: 40px;
+  width: 3px;
+  height: 0rem;
+  background-color: orange;
+
+  transition: height 0.8s ease 0s;
+}
+
+.scroll-progress-backdrop {
+  position: fixed;
+  top: 30%;
+  right: 40px;
+  width: 3px;
+  height: 25rem;
+  background-color: ghostwhite;
+}
+
 .side-button-container {
   display: flex;
   flex-direction: column;
@@ -248,7 +268,7 @@ p {
 
 .fade-in {
   animation-name: fade-in;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
 }
   
@@ -263,7 +283,7 @@ p {
 
 .slide-up {
   animation-name: slide-up;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
 }
 
@@ -280,7 +300,7 @@ p {
 
 .blur-in-slide-up {
   animation-name: blur-in-slide-up;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -296,3 +316,4 @@ p {
     transform: translateY(0);
   }
 }
+
