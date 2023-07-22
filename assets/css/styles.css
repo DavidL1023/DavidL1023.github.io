@@ -22,10 +22,45 @@
 
 /* Body */
 body {
-  background-image: url('/assets/images/bkg.png');
+  background-image: url('/assets/images/parallax/Background.png');
   background-size: cover;
   background-position: center;
   color: var(--text-color);
+}
+
+/* Parallax background */
+.parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#stars {
+  display: none;
+}
+
+#lb {
+  display: none;
+}
+
+#lf1 {
+  display: none;
+}
+
+#lf2 {
+  display: none;
+}
+
+#rb {
+  display: none;
+}
+
+#rf1 {
+  display: none;
+}
+
+#rf2 {
+  display: none;
 }
 
 /* Header */
@@ -255,8 +290,7 @@ p {
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
-/* Styles for mid-sized devices (screen width from 768px to 1023px) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) { /* Sizes for mid-sized devices */
   h1 {
     font-size: 3em;    
   }
@@ -274,8 +308,7 @@ p {
   }
 }
 
-/* Styles for mobile devices (screen width up to 767px) */
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) { /* Sizes for mobile devices */
   h1 {
     font-size: 2.7em;
   }
@@ -304,6 +337,8 @@ p {
   text-align: center;
 }
 
+
+/* Animations */
 .fade-in {
   animation-name: fade-in;
   animation-duration: 4s;
