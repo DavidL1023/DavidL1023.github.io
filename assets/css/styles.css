@@ -28,39 +28,38 @@ body {
   color: var(--text-color);
 }
 
-/* Parallax background */
-.parallax img {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Parallax */
+#moon {
+  mix-blend-mode: screen;
+  
 }
 
 #stars {
-  display: none;
+  
+}
+
+#floor {
+
 }
 
 #lb {
-  display: none;
+
 }
 
 #lf1 {
-  display: none;
+
 }
 
 #lf2 {
-  display: none;
+
 }
 
 #rb {
-  display: none;
+
 }
 
-#rf1 {
-  display: none;
-}
+#rf {
 
-#rf2 {
-  display: none;
 }
 
 /* Header */
