@@ -1,5 +1,4 @@
 # David's Dev Site
-change size of text/layout for mobile
 
 https://www.youtube.com/watch?v=1wfeqDyMUx4
 
