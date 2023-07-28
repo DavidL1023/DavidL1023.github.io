@@ -8,5 +8,3 @@ less wide screen = mountains more in center
 
 # Dependencies
 [FullPage.js](https://github.com/alvarotrigo/fullPage.js)
-
-[jQuery](https://jquery.com/)
