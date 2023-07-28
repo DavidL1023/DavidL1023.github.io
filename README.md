@@ -1,6 +1,7 @@
 # David's Dev Site
 
-https://www.youtube.com/watch?v=1wfeqDyMUx4
+have David scroll up, but then Dev slide out from behind it
+less wide screen = mountains more in center
 
 # See me here
 [Website](https://davidl1023.github.io/)

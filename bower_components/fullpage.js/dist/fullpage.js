@@ -5829,8 +5829,7 @@
         showError('error', 'Incorrect `licenseKey`. Get one for fullPage.js version 4 here:');
         showError('error', 'https://alvarotrigo.com/fullPage/pricing');
       } else if (l && l.length < 20) {
-        console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
-        console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
+        // nope
       }
 
       if (hasClass($html, ENABLED)) {

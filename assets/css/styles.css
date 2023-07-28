@@ -28,6 +28,7 @@ body {
   color: var(--text-color);
 }
 
+/* Parallax / background */
 section img {
   position: absolute;
   top: 0;
@@ -35,13 +36,17 @@ section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 2s ease-in-out;
 }
 
-/* Parallax */
 #moon {
   mix-blend-mode: screen;
   left: 0;
   top: 0;
+}
+
+#stars {
+  top: -300px;
 }
 
 /* Header */
@@ -62,7 +67,7 @@ li, a, button {
   padding: 35px 3% 35px 5%;
 
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  transition: top 3s;
+  transition: top 5s;
 }
 
 #navbar.slide-down {
@@ -86,7 +91,7 @@ li, a, button {
 }
 
 a {
-  transition: all 0.2s ease 0s;
+  transition: all 0.2s ease-out;
 }
 
 a:hover {
@@ -105,7 +110,7 @@ a:hover {
   font-size: 0.8rem;
   color: var(--text-color);
   cursor: pointer;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease-out;
 }
 
 .email-btn button:hover {
@@ -201,7 +206,7 @@ a:hover {
   height: 0rem;
   background-color: orange;
 
-  transition: height 0.8s ease 0s;
+  transition: height 1.5s ease-out;
 }
 
 .scroll-progress-backdrop {
@@ -210,7 +215,7 @@ a:hover {
   right: 2%;
   width: 3px;
   height: 25rem;
-  background-color: ghostwhite;
+  background-color: rgba(248, 248, 255, 0.6);
 }
 
 .side-button-container {
@@ -237,7 +242,7 @@ a:hover {
 
 .side-button:hover img {
   transform: scale(1.1);
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease-out;
 }
 
 @media (max-width: 800px) { /* small screen */
@@ -337,7 +342,7 @@ p {
 
 .slide-up {
   animation-name: slide-up;
-  animation-duration: 4s;
+  animation-duration: 4.5s;
   animation-fill-mode: forwards;
 }
 
@@ -361,7 +366,7 @@ p {
 @keyframes blur-in-slide-up {
   0% {
     opacity: 0;
-    filter: blur(2px);
+    filter: blur(1px);
     transform: translateY(50px);
   }
   100% {
@@ -371,3 +376,55 @@ p {
   }
 }
 
+.blur-in-slide-down {
+  animation-name: blur-in-slide-down;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blur-in-slide-down {
+  0% {
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+  animation-name: slide-left;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-right {
+  animation-name: slide-right;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
