@@ -49,6 +49,18 @@ section img {
   top: -300px;
 }
 
+#lf1 {
+  
+}
+
+#lf2 {
+  
+}
+
+#rf {
+
+}
+
 /* Header */
 li, a, button {
   font-size: 17px;
@@ -120,6 +132,28 @@ a:hover {
 .email-btn button:active {
   background-color: rgba(255, 165, 0, 0.8);
   scale: 0.95;
+}
+
+@media (min-width: 1921px) { /* sizes for larger than normal screen*/
+  li, a, button {
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 13rem;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4.2rem;
+  }
+
+  .email-btn button {
+    font-size: 1rem;
+  }
 }
 
 #navbar .bars {
@@ -201,7 +235,7 @@ a:hover {
 .scroll-progress {
   position: fixed;
   top: 30%;
-  right: 2%;
+  right: 1.5%;
   width: 3px;
   height: 0rem;
   background-color: orange;
@@ -212,7 +246,7 @@ a:hover {
 .scroll-progress-backdrop {
   position: fixed;
   top: 30%;
-  right: 2%;
+  right: 1.5%;
   width: 3px;
   height: 25rem;
   background-color: rgba(248, 248, 255, 0.6);
@@ -245,40 +279,59 @@ a:hover {
   transition: all 0.3s ease-out;
 }
 
-@media (max-width: 800px) { /* small screen */
+@media (max-width: 800px) { /* small screen (hide side buttons) */
   .side-button-container {
     display: none;
   }
 }
 
+/* Text sizes */
 h1 {
-  font-size: 4em;
+  font-size: 5em;
   font-weight: var(--font-weight-semi-bold);
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: var(--font-weight-medium);
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: var(--font-weight-regular);
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: var(--font-weight-light);
   line-height: 1.5;
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
+@media (min-width: 1024px) and (max-width: 1920px) { /* sizes for normal monitors */
+  h1 {
+    font-size: 4em;    
+  }
+  
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) { /* Sizes for mid-sized devices */
   h1 {
-    font-size: 3em;    
+    font-size: 3.4em;    
   }
   
   h2 {
@@ -296,11 +349,11 @@ p {
 
 @media (max-width: 767px) { /* Sizes for mobile devices */
   h1 {
-    font-size: 2.7em;
+    font-size: 3em;
   }
   
   h2 {
-    font-size: 2.3em;
+    font-size: 2.4em;
   }
 
   h3 {

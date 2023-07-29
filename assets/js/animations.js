@@ -58,13 +58,13 @@ new fullpage('#fullpage', {
             starsDeg -= 8 * slidesJumped;
             starsScale += 0.03 * slidesJumped;
 
-            moonY -= 15 * slidesJumped;
+            moonY -= 25 * slidesJumped;
             moonScale -= 0.03 * slidesJumped;
         } else if (direction == 'up') {
             starsDeg += 8 * slidesJumped;
             starsScale -= 0.03 * slidesJumped;
 
-            moonY += 15 * slidesJumped;
+            moonY += 25 * slidesJumped;
             moonScale += 0.03 * slidesJumped;
         }
         stars.style.transform = 'scale(' + starsScale + ') rotate(' + starsDeg + 'deg)';
