@@ -49,18 +49,6 @@ section img {
   top: -300px;
 }
 
-#lf1 {
-  
-}
-
-#lf2 {
-  
-}
-
-#rf {
-
-}
-
 /* Header */
 li, a, button {
   font-size: 17px;
@@ -229,6 +217,10 @@ a:hover {
     left: 2rem;
     width: unset;
   }
+
+  .logo {
+    width: 10rem;
+  }
 }
 
 /* Main */
@@ -345,6 +337,19 @@ p {
   p {
     font-size: 0.9em;
   }
+
+  /* parallax shift */
+  #lf1 {
+    left: 3rem;
+  }
+
+  #lf2 {
+    left: 4rem;
+  }
+
+  #rf {
+    left: -4rem;
+  }
 }
 
 @media (max-width: 767px) { /* Sizes for mobile devices */
@@ -362,6 +367,19 @@ p {
 
   p {
     font-size: 0.9em;
+  }
+
+  /* parallax shift */
+  #lf1 {
+    left: 5rem;
+  }
+
+  #lf2 {
+    left: 6rem;
+  }
+
+  #rf {
+    left: -6rem;
   }
 }
 
