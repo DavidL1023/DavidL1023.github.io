@@ -463,7 +463,7 @@ p {
 
 .blur-in-slide-up {
   animation-name: blur-in-slide-up;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
 }
 
@@ -482,7 +482,7 @@ p {
 
 .blur-in-slide-down {
   animation-name: blur-in-slide-down;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
 }
 
@@ -519,18 +519,18 @@ p {
 .reveal-dev {
   animation-name: reveal-dev;
   animation-duration: 4s;
-  opacity: 0;
   animation-delay: 1.5s;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   animation-fill-mode: forwards;
 }
 
 @keyframes reveal-dev {
   0% {
-    opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(60px);
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   }
   100% {
-    opacity: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     transform: translateX(0);
   }
 }
