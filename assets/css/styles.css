@@ -36,6 +36,7 @@ section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  overflow: visible;
   transition: all 2s ease-in-out;
 }
 
@@ -46,11 +47,11 @@ section img {
 }
 
 #stars {
-  top: -300px;
+  top: -19rem;
 }
 
 /* Header */
-li, a, button {
+li, a {
   font-size: 17px;
   color: var(--text-color);
   text-decoration: none;
@@ -128,20 +129,18 @@ a:hover {
   }
 
   .logo {
-    width: 13rem;
-    height: auto;
-    cursor: pointer;
+    width: 12.6rem;
   }
 
   .nav-links {
-    list-style: none;
-    display: flex;
+
     gap: 4.2rem;
   }
 
   .email-btn button {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
+
 }
 
 #navbar .bars {
@@ -251,9 +250,9 @@ a:hover {
   justify-content: center;
   height: 100vh;
   position: fixed;
-  left: 30px;
+  left: 1.5rem;
   z-index: 100;
-  gap: 35px
+  gap: 2rem;
 }
 
 .side-button {
@@ -265,6 +264,13 @@ a:hover {
   width: 1.8rem;
   height: auto;
 }
+
+@media (min-width: 1921px) { /* size for larger than normal screen*/
+  .side-button img {
+    width: 2.1rem;
+  }
+}
+
 
 .side-button:hover img {
   transform: scale(1.1);
@@ -340,14 +346,22 @@ p {
 
   /* parallax shift */
   #lf1 {
-    left: 3rem;
+    left: 5rem;
   }
 
   #lf2 {
-    left: 4rem;
+    left: 11rem;
   }
 
   #rf {
+    left: -11rem;
+  }
+
+  #lb {
+    left: 4rem;
+  }
+
+  #rb {
     left: -4rem;
   }
 }
@@ -371,15 +385,23 @@ p {
 
   /* parallax shift */
   #lf1 {
-    left: 5rem;
-  }
-
-  #lf2 {
     left: 6rem;
   }
 
+  #lf2 {
+    left: 15rem;
+  }
+
   #rf {
-    left: -6rem;
+    left: -15rem;
+  }
+
+  #lb {
+    left: 5rem;
+  }
+
+  #rb {
+    left: -5rem;
   }
 }
 
