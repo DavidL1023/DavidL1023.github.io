@@ -38,7 +38,6 @@ const lf2x = -6;
 new fullpage('#fullpage', {
     // options here
     licenseKey: 'gplv3-license',
-    paddingTop: '25px',
     anchors: ['home', 'about', 'skills', 'projects', 'contact'],
     menu: '#navbar .menu',
     fixedElements: '#navbar',

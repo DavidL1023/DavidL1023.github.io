@@ -502,6 +502,8 @@ p {
 .slide-right {
   animation-name: slide-right;
   animation-duration: 3s;
+  animation-delay: 1s;
+  opacity: 0;
   animation-fill-mode: forwards;
 }
 
@@ -509,6 +511,25 @@ p {
   0% {
     opacity: 0;
     transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation-name: slide-left;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
   }
   100% {
     opacity: 1;
@@ -526,7 +547,7 @@ p {
 
 @keyframes reveal-dev {
   0% {
-    transform: translateX(60px);
+    transform: translateX(60%);
     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   }
   100% {
@@ -539,13 +560,13 @@ p {
   animation-name: reveal-david;
   animation-duration: 4s;
   animation-delay: 1.5s;
-  transform: translateX(-60px);
+  transform: translateX(-31%);
   animation-fill-mode: forwards;
 }
 
 @keyframes reveal-david {
   0% {
-    transform: translateX(-60px);
+    transform: translateX(-31%);
   }
   100% {
     transform: translateX(0);
