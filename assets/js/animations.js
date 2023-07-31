@@ -42,7 +42,7 @@ new fullpage('#fullpage', {
     anchors: ['home', 'about', 'skills', 'projects', 'contact'],
     menu: '#navbar .menu',
     fixedElements: '#navbar',
-    scrollingSpeed: 1400,
+    scrollingSpeed: 1800,
     scrollOverflow: false,
     loopHorizontal: false,
     slidesNavigation: true,
@@ -93,7 +93,7 @@ new fullpage('#fullpage', {
         }
           
         // Reset all slide content animations
-        removeClasses(isAnimatedFirst, ['blur-in-slide-down', 'fade-in', 'slide-up']);
+        removeClasses(isAnimatedFirst, ['blur-in-slide-down', 'fade-in', 'slide-up']); //the extra two animations cause conflicts so remove them as well
         removeClasses(isAnimatedSecond, ['blur-in-slide-up', 'blur-in-slide-down']);
         removeClasses(isAnimatedThird, ['blur-in-slide-up', 'blur-in-slide-down']);
         removeClasses(isAnimatedFourth, ['blur-in-slide-up', 'blur-in-slide-down']);

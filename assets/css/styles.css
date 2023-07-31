@@ -223,6 +223,17 @@ a:hover {
 }
 
 /* Main */
+#dev {
+  font-weight: 300;
+  color: orange;
+}
+
+.headers-container {
+  /* Ensures the headers appear on the same line */
+  display: flex;
+}
+
+
 .scroll-progress {
   position: fixed;
   top: 30%;
@@ -231,7 +242,7 @@ a:hover {
   height: 0rem;
   background-color: orange;
 
-  transition: height 1.5s ease-out;
+  transition: height 2s ease-out;
 }
 
 .scroll-progress-backdrop {
@@ -459,7 +470,7 @@ p {
 @keyframes blur-in-slide-up {
   0% {
     opacity: 0;
-    filter: blur(1px);
+    filter: blur(2px);
     transform: translateY(50px);
   }
   100% {
@@ -478,30 +489,13 @@ p {
 @keyframes blur-in-slide-down {
   0% {
     opacity: 0;
-    filter: blur(1px);
+    filter: blur(2px);
     transform: translateY(-50px);
   }
   100% {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
-  }
-}
-
-.slide-left {
-  animation-name: slide-left;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slide-left {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 
@@ -518,6 +512,42 @@ p {
   }
   100% {
     opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal-dev {
+  animation-name: reveal-dev;
+  animation-duration: 4s;
+  opacity: 0;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal-dev {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal-david {
+  animation-name: reveal-david;
+  animation-duration: 4s;
+  animation-delay: 1.5s;
+  transform: translateX(-60px);
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal-david {
+  0% {
+    transform: translateX(-60px);
+  }
+  100% {
     transform: translateX(0);
   }
 }
