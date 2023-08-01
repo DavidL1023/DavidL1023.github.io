@@ -355,19 +355,19 @@ p {
 
   /* parallax shift */
   #lf1 {
-    left: 6vh;
+    left: 15vh;
   }
 
   #lf2 {
-    left: 14vh;
+    left: 21vh;
   }
 
   #rf {
-    left: -14vh;
+    left: -20vh;
   }
 
   #lb {
-    left: 5vh;
+    left: 13vh;
   }
 
   #rb {
@@ -394,23 +394,31 @@ p {
 
   /* parallax shift */
   #lf1 {
-    left: 20vh;
+    left: 16vh;
   }
 
   #lf2 {
-    left: 33vh;
+    left: 36vh;
   }
 
   #rf {
-    left: -30vh;
+    left: -33vh;
   }
 
   #lb {
-    left: 18vh;
+    left: 20vh;
   }
 
   #rb {
-    left: -20vh;
+    left: -18vh;
+  }
+  
+}
+
+/* Reset the left property for landscape mode to combat parallax being off of the edges*/
+@media (orientation: landscape) {
+  #lf1, #lf2, #rf, #lb, #rb {
+    left: 0; 
   }
 }
 
