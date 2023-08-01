@@ -121,8 +121,8 @@ new fullpage('#fullpage', {
         }
           
         // progress bar animation
-        const remCalc = (slideNumber) * 5;
-        progressBar.style.height = remCalc + 'rem';
+        const remCalc = (slideNumber) * 8;
+        progressBar.style.height = remCalc + 'vh';
 
     }
 

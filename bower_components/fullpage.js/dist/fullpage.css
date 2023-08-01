@@ -69,10 +69,10 @@ html.fp-enabled,
     transition: all 0.3s ease 0s;
 }
 .fp-prev{
-    left: 5%;
+    left: 5vw;
 }
 .fp-next{
-    right: 5%;
+    right: 5vw;
 }
 .fp-arrow{
     width: 0;
@@ -87,6 +87,17 @@ html.fp-enabled,
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #f8f8f8;
 }
+
+/* style for larger screen */
+@media (min-width: 1921px) {
+    .fp-arrow.fp-prev {
+        border-width: 44.5px 40px 42.5px 0;
+    }
+    .fp-arrow.fp-next {
+        border-width: 44.5px 0 42.5px 40px;
+    }
+}
+
 /* Styles for mobile devices (screen width up to 767px) */
 /* I cant make it dissapear, so workaround is make it fly off the screen */
 @media (max-width: 800px) {

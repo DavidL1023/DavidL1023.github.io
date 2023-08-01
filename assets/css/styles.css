@@ -234,10 +234,10 @@ a:hover {
 
 .scroll-progress {
   position: fixed;
-  top: 30%;
-  right: 1.5%;
+  top: 30vh;
+  right: 1.5vw;
   width: 3px;
-  height: 0rem;
+  height: 0vh;
   background-color: orange;
 
   transition: height 2s ease-out;
@@ -245,10 +245,10 @@ a:hover {
 
 .scroll-progress-backdrop {
   position: fixed;
-  top: 30%;
-  right: 1.5%;
+  top: 30vh;
+  right: 1.5vw;
   width: 3px;
-  height: 25rem;
+  height: 40vh;
   background-color: rgba(248, 248, 255, 0.6);
 }
 
