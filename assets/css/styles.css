@@ -33,11 +33,11 @@ section img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   overflow: visible;
-  transition: all 2s ease-in-out;
+  transition: left 2s ease-in-out, transform 2s ease-in-out;
 }
 
 #moon {
@@ -47,12 +47,12 @@ section img {
 }
 
 #stars {
-  top: -19rem;
+  top: -25vh;
 }
 
 /* Header */
 li, a {
-  font-size: 17px;
+  font-size: 1.05rem;
   color: var(--text-color);
   text-decoration: none;
 }
@@ -61,11 +61,11 @@ li, a {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  top: -150px; /* Initial position before slide down */
+  top: -23vh; /* Initial position before slide down */
   left: 0;
   right: 0;
   align-items: center;
-  padding: 35px 3% 35px 5%;
+  padding: 3vh 3vw 3vh 5vw;
 
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   transition: top 5s;
@@ -76,7 +76,7 @@ li, a {
 }
 
 .logo {
-  width: 11rem;
+  width: 180px;
   height: auto;
   cursor: pointer;
 }
@@ -84,7 +84,7 @@ li, a {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 3.8rem;
+  gap: 70px;
 }
 
 .nav-links li {
@@ -104,7 +104,7 @@ a:hover {
 }
 
 .email-btn button {
-  padding: 0.4rem 0.8rem;
+  padding: 0.6em 0.9em;
   background-color: rgba(255, 165, 0, 1);
   border: none;
   border-radius: 50px;
@@ -124,34 +124,32 @@ a:hover {
 }
 
 @media (min-width: 1921px) { /* sizes for larger than normal screen*/
-  li, a, button {
-    font-size: 20px;
-  }
-
-  .logo {
-    width: 12.6rem;
-  }
-
-  .nav-links {
-
-    gap: 4.2rem;
-  }
-
   .email-btn button {
     font-size: 0.95rem;
   }
 
+  .logo {
+    width: 205px;
+  }
+
+  li, a {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 85px;
+  }
 }
 
 #navbar .bars {
   cursor: pointer;
-  width: 1.3rem;
+  width: 25px;
 }
 
 #navbar .cross {
   cursor: pointer;
   display: none;
-  width: 1.3rem;
+  width: 25px;
 }
 
 .dropdown-menu {
@@ -159,8 +157,8 @@ a:hover {
   position: absolute;
   top: 70px;
   height: 0px;
-  right: 2rem;
-  width: 300px;
+  right: 40px;
+  width: 18em;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
   border-radius: 10px;
@@ -170,11 +168,11 @@ a:hover {
 }
 
 .dropdown-menu.open {
-  height: 290px;
+  height: 18em;
 }
 
 .dropdown-menu li {
-  padding: 0.7rem;
+  padding: 0.65em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,11 +180,11 @@ a:hover {
 
 .dropdown-menu .email-btn button {
   width: 100%;
-  max-width: 16rem;
+  max-width: 19em;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 @media (min-width: 1200px) { /* Large screen (no menu button) */
@@ -218,7 +216,7 @@ a:hover {
   }
 
   .logo {
-    width: 10rem;
+    width: 160px;
   }
 }
 
@@ -261,9 +259,9 @@ a:hover {
   justify-content: center;
   height: 100vh;
   position: fixed;
-  left: 1.5rem;
+  left: 2vw;
   z-index: 100;
-  gap: 2rem;
+  gap: 3vh;
 }
 
 .side-button {
@@ -272,13 +270,13 @@ a:hover {
 }
 
 .side-button img {
-  width: 1.8rem;
+  width: 35px;
   height: auto;
 }
 
 @media (min-width: 1921px) { /* size for larger than normal screen*/
   .side-button img {
-    width: 2.1rem;
+    width: 40px;
   }
 }
 
@@ -296,25 +294,25 @@ a:hover {
 
 /* Text sizes */
 h1 {
-  font-size: 5em;
+  font-size: 5rem;
   font-weight: var(--font-weight-semi-bold);
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: var(--font-weight-medium);
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: var(--font-weight-regular);
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: var(--font-weight-light);
   line-height: 1.5;
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
@@ -322,97 +320,97 @@ p {
 
 @media (min-width: 1024px) and (max-width: 1920px) { /* sizes for normal monitors */
   h1 {
-    font-size: 4em;    
+    font-size: 4rem;    
   }
   
   h2 {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) { /* Sizes for mid-sized devices */
   h1 {
-    font-size: 3.4em;    
+    font-size: 3.6rem;    
   }
   
   h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 
   h3 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
 
   p {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 
   /* parallax shift */
   #lf1 {
-    left: 5rem;
+    left: 6vh;
   }
 
   #lf2 {
-    left: 11rem;
+    left: 14vh;
   }
 
   #rf {
-    left: -11rem;
+    left: -14vh;
   }
 
   #lb {
-    left: 4rem;
+    left: 5vh;
   }
 
   #rb {
-    left: -4rem;
+    left: -13vh;
   }
 }
 
 @media (max-width: 767px) { /* Sizes for mobile devices */
   h1 {
-    font-size: 3em;
+    font-size: 2.8rem;
   }
   
   h2 {
-    font-size: 2.4em;
+    font-size: 2.2rem;
   }
 
   h3 {
-    font-size: 1.2em;
+    font-size: 1rem;
   }
 
   p {
-    font-size: 0.9em;
+    font-size: 0.8rem;
   }
 
   /* parallax shift */
   #lf1 {
-    left: 6rem;
+    left: 20vh;
   }
 
   #lf2 {
-    left: 15rem;
+    left: 33vh;
   }
 
   #rf {
-    left: -15rem;
+    left: -30vh;
   }
 
   #lb {
-    left: 5rem;
+    left: 18vh;
   }
 
   #rb {
-    left: -5rem;
+    left: -20vh;
   }
 }
 

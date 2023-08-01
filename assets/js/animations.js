@@ -27,12 +27,12 @@ let starsDeg = 0;
 let moonY = 0;
 let moonScale = 1;
 
-const floorY = 1.5;
-const rbX = 4.5;
-const rfX = 6;
-const lbX = -4;
-const lf1X = -5;
-const lf2x = -6;
+const floorY = 24;
+const rbX = 72;
+const rfX = 96;
+const lbX = -64;
+const lf1X = -80;
+const lf2x = -96;
 
 // initialize fullPage
 new fullpage('#fullpage', {
@@ -57,38 +57,38 @@ new fullpage('#fullpage', {
             starsDeg -= 8 * slidesJumped;
             starsScale += 0.03 * slidesJumped;
 
-            moonY -= 1.4 * slidesJumped;
+            moonY -= 2.2 * slidesJumped;
             moonScale -= 0.03 * slidesJumped;
         } else if (direction == 'up') {
             starsDeg += 8 * slidesJumped;
             starsScale -= 0.03 * slidesJumped;
 
-            moonY += 1.4 * slidesJumped;
+            moonY += 2.2 * slidesJumped;
             moonScale += 0.03 * slidesJumped;
         }
         stars.style.transform = 'scale(' + starsScale + ') rotate(' + starsDeg + 'deg)';
-        moon.style.transform = 'translateY(' + moonY + 'rem) scale(' + moonScale + ')';
+        moon.style.transform = 'translateY(' + moonY + 'vh) scale(' + moonScale + ')';
 
         // mountain parallax effect
         if( i == 0 && direction == 'down' ) {
-            floor.style.transform = 'translateY(' + floorY + 'rem)';
+            floor.style.transform = 'translateY(' + floorY + 'px)';
             
-            rb.style.transform = 'translateX(' + rbX + 'rem)';
-            rf.style.transform = 'translateX(' + rfX + 'rem)';
+            rb.style.transform = 'translateX(' + rbX + 'px)';
+            rf.style.transform = 'translateX(' + rfX + 'px)';
 
-            lb.style.transform = 'translateX(' + lbX + 'rem)';
-            lf1.style.transform = 'translateX(' + lf1X + 'rem)';
-            lf2.style.transform = 'translateX(' + lf2x + 'rem)';
+            lb.style.transform = 'translateX(' + lbX + 'px)';
+            lf1.style.transform = 'translateX(' + lf1X + 'px)';
+            lf2.style.transform = 'translateX(' + lf2x + 'px)';
 
         } else if (n == 0 && direction == 'up') {
-            floor.style.transform = 'translateY(' + 0 + 'rem)';
+            floor.style.transform = 'translateY(' + 0 + 'px)';
             
-            rb.style.transform = 'translateX(' + 0 + 'rem)';
-            rf.style.transform = 'translateX(' + 0 + 'rem)';
+            rb.style.transform = 'translateX(' + 0 + 'px)';
+            rf.style.transform = 'translateX(' + 0 + 'px)';
 
-            lb.style.transform = 'translateX(' + 0 + 'rem)';
-            lf1.style.transform = 'translateX(' + 0 + 'rem)';
-            lf2.style.transform = 'translateX(' + 0 + 'rem)';
+            lb.style.transform = 'translateX(' + 0 + 'px)';
+            lf1.style.transform = 'translateX(' + 0 + 'px)';
+            lf2.style.transform = 'translateX(' + 0 + 'px)';
         }
           
         // Reset all slide content animations
