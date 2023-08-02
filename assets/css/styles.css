@@ -222,15 +222,18 @@ a:hover {
 
 /* Main */
 #dev {
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
   color: orange;
+}
+
+#bracket {
+  font-weight: var(--font-weight-light);
 }
 
 .headers-container {
   /* Ensures the headers appear on the same line */
   display: flex;
 }
-
 
 .scroll-progress {
   position: fixed;
@@ -451,8 +454,8 @@ p {
 
 .fade-in-delayed {
   animation-name: fade-in-delayed;
-  animation-duration: 2.5s;
-  animation-delay: 1.5s;
+  animation-duration: 1.3s;
+  animation-delay: 1.6s;
   opacity: 0;
   animation-fill-mode: forwards;
 }
