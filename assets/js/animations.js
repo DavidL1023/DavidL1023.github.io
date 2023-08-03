@@ -77,8 +77,12 @@ new fullpage('#fullpage', {
         stars.style.transform = 'scale(' + starsScale + ') rotate(' + starsDeg + 'deg)';
         moon.style.transform = 'translateY(' + moonY + 'vh) scale(' + moonScale + ')';
 
-        // mountain parallax effect
-        if( i == 0 && direction == 'down' ) {
+        // Main page
+        if (n != 0) {
+            // Only play starfall on first slide
+            hideStarfallAnimations();
+
+            // mountain parallax effect
             floor.style.transform = 'translateY(' + floorY + 'vh)';
             
             rb.style.transform = 'translateX(' + rbX + 'vh)';
@@ -87,8 +91,9 @@ new fullpage('#fullpage', {
             lb.style.transform = 'translateX(' + lbX + 'vh)';
             lf1.style.transform = 'translateX(' + lf1X + 'vh)';
             lf2.style.transform = 'translateX(' + lf2x + 'vh)';
+        } else {
+            showStarfallAnimations();
 
-        } else if (n == 0 && direction == 'up') {
             floor.style.transform = 'translateY(' + 0 + 'vh)';
             
             rb.style.transform = 'translateX(' + 0 + 'vh)';
@@ -97,13 +102,6 @@ new fullpage('#fullpage', {
             lb.style.transform = 'translateX(' + 0 + 'vh)';
             lf1.style.transform = 'translateX(' + 0 + 'vh)';
             lf2.style.transform = 'translateX(' + 0 + 'vh)';
-        }
-
-        // Only play starfall on first slide
-        if (n != 0) {
-            hideStarfallAnimations();
-        } else {
-            showStarfallAnimations();
         }
           
         // Reset all slide content animations

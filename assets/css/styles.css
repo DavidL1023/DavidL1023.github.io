@@ -29,7 +29,7 @@ body {
 }
 
 /* Parallax / background */
-#parallax-bg img {
+section img {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,6 +57,7 @@ body {
   height: 4px;
   background: white;
   opacity: 0;
+  transition: scale 1s ease-in-out;
   border-radius: 50%;
   box-shadow: 0 0 0 4px rgba(110, 201, 243, 0.1),
   0 0 0 8px rgba(104, 102, 175, 0.1),
@@ -74,78 +75,79 @@ body {
 }
 
 #shooting-stars span.hidden {
-  transition: scale 1s ease-in-out;
   scale: 0;
 }
 
 #shooting-stars span:nth-child(1) {
   right: 0vw;
   left: initial;
-  animation-delay: 15s;
+  animation-delay: 15s; /* initial delay on website launch (thats it) */
   animation-duration: 3.8s;
 }
 
-#shooting-stars span:nth-child(2) {
-  right: 80vw;
-  left: initial;
-  animation-delay: 5s;
-  animation-duration: 2s;
-}
-
-#shooting-stars span:nth-child(3) {
+#shooting-stars span:nth-child(1) {
   right: 50vw;
   left: initial;
   animation-delay: 10s;
   animation-duration: 5s;
 }
 
-#shooting-stars span:nth-child(4) {
+#shooting-stars span:nth-child(2) {
   right: 30vw;
   left: initial;
   animation-delay: 2s;
   animation-duration: 3.2s;
 }
 
-#shooting-stars span:nth-child(5) {
+#shooting-stars span:nth-child(3) {
   right: 10vw;
   left: initial;
   animation-delay: 3s;
   animation-duration: 2.8s;
 }
 
-#shooting-stars span:nth-child(6) {
+#shooting-stars span:nth-child(4) {
   right: 15vw;
   left: initial;
   animation-delay: 9s;
   animation-duration: 2.3s;
 }
 
-#shooting-stars span:nth-child(7) {
+#shooting-stars span:nth-child(5) {
   right: 60vw;
   left: initial;
   animation-delay: 7s;
   animation-duration: 4.2s;
 }
 
-#shooting-stars span:nth-child(8) {
+#shooting-stars span:nth-child(6) {
   right: 45vw;
   left: initial;
   animation-delay: 4s;
   animation-duration: 4.5s;
 }
 
-#shooting-stars span:nth-child(9) {
+#shooting-stars span:nth-child(7) {
   right: 25vw;
   left: initial;
   animation-delay: 8s;
   animation-duration: 3.4s;
 }
 
-#shooting-stars span:nth-child(10) {
-  right: 65vw;
+#shooting-stars span:nth-child(8) {
+  right: 0vw;
   left: initial;
-  animation-delay: 12s;
-  animation-duration: 2.6s;
+  top: 20vh;
+  animation-delay: 9s;
+  animation-duration: 3.2s;
+}
+
+#shooting-stars span:nth-child(9) {
+  right: 0vw;
+  left: initial;
+  top: 40vh;
+  animation-delay: 5s;
+  animation-duration: 3.9s;
 }
 
 /* Header */
@@ -380,7 +382,6 @@ a:hover {
     width: 40px;
   }
 }
-
 
 .side-button:hover img {
   transform: scale(1.1);
