@@ -47,7 +47,8 @@ section img {
 }
 
 #stars {
-  top: -25vh;
+  top: -28vh;
+  overflow: visible;
 }
 
 /* Header */
@@ -309,7 +310,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: var(--font-weight-regular);
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.8);
 }
@@ -330,7 +331,7 @@ p {
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   p {
@@ -348,7 +349,7 @@ p {
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   p {
@@ -387,7 +388,7 @@ p {
   }
 
   h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   p {
@@ -417,8 +418,8 @@ p {
   
 }
 
-/* Reset the left property for landscape mode to combat parallax being off of the edges*/
-@media (orientation: landscape) {
+/* Reset the left property to combat parallax being off of the edges due to height*/
+@media (max-height: 576px) {
   #lf1, #lf2, #rf, #lb, #rb {
     left: 0; 
   }

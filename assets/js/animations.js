@@ -10,7 +10,7 @@ const isAnimatedFifth = document.querySelectorAll('.fifth .js-animated');
 
 // website progress bar variable
 const progressBar = document.getElementById('scroll-progress');
-progressBar.style.height = '5rem'; // set initial height before onLeave can be called
+progressBar.style.height = '8vh'; // set initial height before onLeave can be called
 
 // background parallax variables
 const stars = document.getElementById('stars');
@@ -27,12 +27,12 @@ let starsDeg = 0;
 let moonY = 0;
 let moonScale = 1;
 
-const floorY = 24;
-const rbX = 72;
-const rfX = 96;
-const lbX = -64;
-const lf1X = -80;
-const lf2x = -96;
+const floorY = 2.2;
+const rbX = 6.6;
+const rfX = 8.8;
+const lbX = -5.9;
+const lf1X = -7.4;
+const lf2x = -8.8;
 
 // initialize fullPage
 new fullpage('#fullpage', {
@@ -54,13 +54,13 @@ new fullpage('#fullpage', {
         
         // background parallax effect
         if( direction == 'down' ) {
-            starsDeg -= 8 * slidesJumped;
+            starsDeg += 360 * slidesJumped;
             starsScale += 0.03 * slidesJumped;
 
             moonY -= 2.2 * slidesJumped;
             moonScale -= 0.03 * slidesJumped;
         } else if (direction == 'up') {
-            starsDeg += 8 * slidesJumped;
+            starsDeg -= 360 * slidesJumped;
             starsScale -= 0.03 * slidesJumped;
 
             moonY += 2.2 * slidesJumped;
@@ -71,24 +71,24 @@ new fullpage('#fullpage', {
 
         // mountain parallax effect
         if( i == 0 && direction == 'down' ) {
-            floor.style.transform = 'translateY(' + floorY + 'px)';
+            floor.style.transform = 'translateY(' + floorY + 'vh)';
             
-            rb.style.transform = 'translateX(' + rbX + 'px)';
-            rf.style.transform = 'translateX(' + rfX + 'px)';
+            rb.style.transform = 'translateX(' + rbX + 'vh)';
+            rf.style.transform = 'translateX(' + rfX + 'vh)';
 
-            lb.style.transform = 'translateX(' + lbX + 'px)';
-            lf1.style.transform = 'translateX(' + lf1X + 'px)';
-            lf2.style.transform = 'translateX(' + lf2x + 'px)';
+            lb.style.transform = 'translateX(' + lbX + 'vh)';
+            lf1.style.transform = 'translateX(' + lf1X + 'vh)';
+            lf2.style.transform = 'translateX(' + lf2x + 'vh)';
 
         } else if (n == 0 && direction == 'up') {
-            floor.style.transform = 'translateY(' + 0 + 'px)';
+            floor.style.transform = 'translateY(' + 0 + 'vh)';
             
-            rb.style.transform = 'translateX(' + 0 + 'px)';
-            rf.style.transform = 'translateX(' + 0 + 'px)';
+            rb.style.transform = 'translateX(' + 0 + 'vh)';
+            rf.style.transform = 'translateX(' + 0 + 'vh)';
 
-            lb.style.transform = 'translateX(' + 0 + 'px)';
-            lf1.style.transform = 'translateX(' + 0 + 'px)';
-            lf2.style.transform = 'translateX(' + 0 + 'px)';
+            lb.style.transform = 'translateX(' + 0 + 'vh)';
+            lf1.style.transform = 'translateX(' + 0 + 'vh)';
+            lf2.style.transform = 'translateX(' + 0 + 'vh)';
         }
           
         // Reset all slide content animations
