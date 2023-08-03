@@ -29,7 +29,7 @@ body {
 }
 
 /* Parallax / background */
-section img {
+#parallax-bg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,18 +37,115 @@ section img {
   height: 100vh;
   object-fit: cover;
   overflow: visible;
-  transition: left 2s ease-in-out, transform 2s ease-in-out;
+  transition: left 2s ease-in-out, transform 2.2s ease-in-out;
 }
 
 #moon {
   mix-blend-mode: screen;
-  left: 0;
-  top: 0;
 }
 
 #stars {
   top: -28vh;
-  overflow: visible;
+}
+
+/* Shooting stars */
+#shooting-stars span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: white;
+  opacity: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(110, 201, 243, 0.1),
+  0 0 0 8px rgba(104, 102, 175, 0.1),
+  0 0 20px rgb(216, 45, 165);
+}
+
+#shooting-stars span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9vw;
+  height: 1px;
+  background: linear-gradient(90deg, rgb(252, 246, 255), transparent);  
+}
+
+#shooting-stars span.hidden {
+  transition: scale 1s ease-in-out;
+  scale: 0;
+}
+
+#shooting-stars span:nth-child(1) {
+  right: 0vw;
+  left: initial;
+  animation-delay: 15s;
+  animation-duration: 3.8s;
+}
+
+#shooting-stars span:nth-child(2) {
+  right: 80vw;
+  left: initial;
+  animation-delay: 5s;
+  animation-duration: 2s;
+}
+
+#shooting-stars span:nth-child(3) {
+  right: 50vw;
+  left: initial;
+  animation-delay: 10s;
+  animation-duration: 5s;
+}
+
+#shooting-stars span:nth-child(4) {
+  right: 30vw;
+  left: initial;
+  animation-delay: 2s;
+  animation-duration: 3.2s;
+}
+
+#shooting-stars span:nth-child(5) {
+  right: 10vw;
+  left: initial;
+  animation-delay: 3s;
+  animation-duration: 2.8s;
+}
+
+#shooting-stars span:nth-child(6) {
+  right: 15vw;
+  left: initial;
+  animation-delay: 9s;
+  animation-duration: 2.3s;
+}
+
+#shooting-stars span:nth-child(7) {
+  right: 60vw;
+  left: initial;
+  animation-delay: 7s;
+  animation-duration: 4.2s;
+}
+
+#shooting-stars span:nth-child(8) {
+  right: 45vw;
+  left: initial;
+  animation-delay: 4s;
+  animation-duration: 4.5s;
+}
+
+#shooting-stars span:nth-child(9) {
+  right: 25vw;
+  left: initial;
+  animation-delay: 8s;
+  animation-duration: 3.4s;
+}
+
+#shooting-stars span:nth-child(10) {
+  right: 65vw;
+  left: initial;
+  animation-delay: 12s;
+  animation-duration: 2.6s;
 }
 
 /* Header */
@@ -596,5 +693,21 @@ p {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+.shooting-star {
+  animation-name: shooting-star;
+  animation: shooting-star 3s linear infinite;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-100vh);
+    opacity: 0;
   }
 }

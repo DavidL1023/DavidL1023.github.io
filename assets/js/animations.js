@@ -14,6 +14,7 @@ progressBar.style.height = '8vh'; // set initial height before onLeave can be ca
 
 // background parallax variables
 const stars = document.getElementById('stars');
+const shootingStars = document.querySelectorAll("#shooting-stars span");
 const moon = document.getElementById('moon');
 const rb = document.getElementById('rb');
 const lb = document.getElementById('lb');
@@ -27,12 +28,19 @@ let starsDeg = 0;
 let moonY = 0;
 let moonScale = 1;
 
-const floorY = 2.2;
-const rbX = 6.6;
-const rfX = 8.8;
-const lbX = -5.9;
-const lf1X = -7.4;
-const lf2x = -8.8;
+const floorY = 2.3;
+const rbX = 6.8;
+const rfX = 9;
+const lbX = -6.1;
+const lf1X = -7.6;
+const lf2x = -9;
+
+// Shooting stars event listener
+const animationPauseDelay = 5000;
+
+shootingStars.forEach((element) => {
+    element.addEventListener("animationiteration", () => restartStarfallAnimations(element));
+});
 
 // initialize fullPage
 new fullpage('#fullpage', {
@@ -55,16 +63,16 @@ new fullpage('#fullpage', {
         // background parallax effect
         if( direction == 'down' ) {
             starsDeg += 360 * slidesJumped;
-            starsScale += 0.03 * slidesJumped;
+            starsScale += 0.08 * slidesJumped;
 
-            moonY -= 2.2 * slidesJumped;
-            moonScale -= 0.03 * slidesJumped;
+            moonY += 2.4 * slidesJumped;
+            moonScale += 0.05 * slidesJumped;
         } else if (direction == 'up') {
             starsDeg -= 360 * slidesJumped;
-            starsScale -= 0.03 * slidesJumped;
+            starsScale -= 0.08 * slidesJumped;
 
-            moonY += 2.2 * slidesJumped;
-            moonScale += 0.03 * slidesJumped;
+            moonY -= 2.4 * slidesJumped;
+            moonScale -= 0.05 * slidesJumped;
         }
         stars.style.transform = 'scale(' + starsScale + ') rotate(' + starsDeg + 'deg)';
         moon.style.transform = 'translateY(' + moonY + 'vh) scale(' + moonScale + ')';
@@ -89,6 +97,13 @@ new fullpage('#fullpage', {
             lb.style.transform = 'translateX(' + 0 + 'vh)';
             lf1.style.transform = 'translateX(' + 0 + 'vh)';
             lf2.style.transform = 'translateX(' + 0 + 'vh)';
+        }
+
+        // Only play starfall on first slide
+        if (n != 0) {
+            hideStarfallAnimations();
+        } else {
+            showStarfallAnimations();
         }
           
         // Reset all slide content animations
@@ -138,5 +153,24 @@ function removeClasses(elements, classNames) {
 function addClasses(elements, classNames) {
     elements.forEach(element => {
       classNames.forEach(className => element.classList.add(className));
+    });
+}
+
+function restartStarfallAnimations(element) {
+    element.style.animation = "none";
+    setTimeout(() => {
+        element.style.animation = `shooting-star 3s linear infinite`;
+    }, animationPauseDelay);
+}
+
+function hideStarfallAnimations() {
+    shootingStars.forEach((element) => {
+        element.classList.add('hidden');
+    });
+}
+
+function showStarfallAnimations() {
+    shootingStars.forEach((element) => {
+        element.classList.remove('hidden');
     });
 }
