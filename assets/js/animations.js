@@ -35,13 +35,6 @@ const lbX = -6.1;
 const lf1X = -7.6;
 const lf2x = -9;
 
-// Shooting stars event listener
-const animationPauseDelay = 8000;
-
-shootingStars.forEach((element) => {
-    element.addEventListener("animationiteration", () => restartStarfallAnimations(element));
-});
-
 // initialize fullPage
 new fullpage('#fullpage', {
     // options here
@@ -154,13 +147,6 @@ function addClasses(elements, classNames) {
     elements.forEach(element => {
       classNames.forEach(className => element.classList.add(className));
     });
-}
-
-function restartStarfallAnimations(element) {
-    element.style.animation = "none";
-    setTimeout(() => {
-        element.style.animation = `shooting-star 3s linear infinite`;
-    }, animationPauseDelay);
 }
 
 function hideStarfallAnimations() {

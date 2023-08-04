@@ -80,67 +80,53 @@ section img {
 
 #shooting-stars :nth-child(1) {
   right: 0vw;
+  top: 15vh;
   left: initial;
-  animation-delay: 15s; /* initial delay on website launch (thats it) */
-  animation-duration: 3.8s; /* initial speed on website launch (thats it) */
+  animation-delay: 12.2s;
+  animation-duration: 7.6s;
 }
 
 #shooting-stars :nth-child(2) {
   right: 30vw;
   left: initial;
-  animation-delay: 2s;
-  animation-duration: 3.2s;
+  animation-delay: 2.8s;
+  animation-duration: 6.4s;
 }
 
 #shooting-stars :nth-child(3) {
-  right: 10vw;
+  right: 0vw;
+  top: 20vh;
   left: initial;
-  animation-delay: 3s;
-  animation-duration: 2.8s;
+  animation-delay: 6.3s;
+  animation-duration: 5.6s;
 }
 
 #shooting-stars :nth-child(4) {
   right: 15vw;
   left: initial;
-  animation-delay: 9s;
-  animation-duration: 2.3s;
+  animation-delay: 9.5s;
+  animation-duration: 4.8s;
 }
 
 #shooting-stars :nth-child(5) {
   right: 60vw;
   left: initial;
-  animation-delay: 7s;
-  animation-duration: 2.8s;
+  animation-delay: 7.3s;
+  animation-duration: 3.8s;
 }
 
 #shooting-stars :nth-child(6) {
   right: 45vw;
   left: initial;
-  animation-delay: 4s;
-  animation-duration: 1.5s;
+  animation-delay: 4.9s;
+  animation-duration: 3s;
 }
 
 #shooting-stars :nth-child(7) {
   right: 25vw;
   left: initial;
-  animation-delay: 8s;
-  animation-duration: 3.4s;
-}
-
-#shooting-stars :nth-child(8) {
-  right: 0vw;
-  left: initial;
-  top: 20vh;
-  animation-delay: 9s;
-  animation-duration: 3.2s;
-}
-
-#shooting-stars :nth-child(9) {
-  right: 0vw;
-  left: initial;
-  top: 40vh;
-  animation-delay: 5s;
-  animation-duration: 3.9s;
+  animation-delay: 8.7s;
+  animation-duration: 6.8s;
 }
 
 /* Header */
