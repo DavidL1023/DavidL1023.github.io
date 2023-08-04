@@ -36,7 +36,7 @@ const lf1X = -7.6;
 const lf2x = -9;
 
 // Shooting stars event listener
-const animationPauseDelay = 5000;
+const animationPauseDelay = 8000;
 
 shootingStars.forEach((element) => {
     element.addEventListener("animationiteration", () => restartStarfallAnimations(element));
@@ -62,13 +62,13 @@ new fullpage('#fullpage', {
         
         // background parallax effect
         if( direction == 'down' ) {
-            starsDeg += 360 * slidesJumped;
+            starsDeg += 72 * slidesJumped;
             starsScale += 0.08 * slidesJumped;
 
             moonY += 2.4 * slidesJumped;
             moonScale += 0.05 * slidesJumped;
         } else if (direction == 'up') {
-            starsDeg -= 360 * slidesJumped;
+            starsDeg -= 72 * slidesJumped;
             starsScale -= 0.08 * slidesJumped;
 
             moonY -= 2.4 * slidesJumped;
@@ -77,10 +77,11 @@ new fullpage('#fullpage', {
         stars.style.transform = 'scale(' + starsScale + ') rotate(' + starsDeg + 'deg)';
         moon.style.transform = 'translateY(' + moonY + 'vh) scale(' + moonScale + ')';
 
-        // Main page
+        // main page
         if (n != 0) {
-            // Only play starfall on first slide
+            // only play starfall on first slide
             hideStarfallAnimations();
+            pauseStarfallAnimations();
 
             // mountain parallax effect
             floor.style.transform = 'translateY(' + floorY + 'vh)';
@@ -93,6 +94,7 @@ new fullpage('#fullpage', {
             lf2.style.transform = 'translateX(' + lf2x + 'vh)';
         } else {
             showStarfallAnimations();
+            resumeStarfallAnimations();
 
             floor.style.transform = 'translateY(' + 0 + 'vh)';
             
@@ -170,5 +172,17 @@ function hideStarfallAnimations() {
 function showStarfallAnimations() {
     shootingStars.forEach((element) => {
         element.classList.remove('hidden');
+    });
+}
+
+function pauseStarfallAnimations() {
+    shootingStars.forEach((element) => {
+        element.style.animationPlayState = "paused";
+    });
+}
+
+function resumeStarfallAnimations() {
+    shootingStars.forEach((element) => {
+        element.style.animationPlayState = "running";
     });
 }
