@@ -29,14 +29,14 @@ body {
 }
 
 /* Parallax / background */
-section img {
+#parallax-bg img {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   overflow: visible;
+  object-fit: cover;
   transition: left 2s ease-in-out, transform 2.2s ease-in-out;
 }
 
@@ -434,23 +434,23 @@ p {
   }
 
   /* parallax shift */
-  #lf1 {
+  #parallax-bg #lf1 {
     left: 15vh;
   }
 
-  #lf2 {
+  #parallax-bg #lf2 {
     left: 21vh;
   }
 
-  #rf {
+  #parallax-bg #rf {
     left: -20vh;
   }
 
-  #lb {
+  #parallax-bg #lb {
     left: 13vh;
   }
 
-  #rb {
+  #parallax-bg #rb {
     left: -13vh;
   }
 }
@@ -473,23 +473,23 @@ p {
   }
 
   /* parallax shift */
-  #lf1 {
+  #parallax-bg #lf1 {
     left: 16vh;
   }
 
-  #lf2 {
+  #parallax-bg #lf2 {
     left: 36vh;
   }
 
-  #rf {
+  #parallax-bg #rf {
     left: -33vh;
   }
 
-  #lb {
+  #parallax-bg #lb {
     left: 20vh;
   }
 
-  #rb {
+  #parallax-bg #rb {
     left: -18vh;
   }
   
@@ -497,7 +497,11 @@ p {
 
 /* Reset the left property to combat parallax being off of the edges due to height*/
 @media (max-height: 576px) {
-  #lf1, #lf2, #rf, #lb, #rb {
+  #parallax-bg #lf1, 
+  #parallax-bg #lf2, 
+  #parallax-bg #rf, 
+  #parallax-bg #lb, 
+  #parallax-bg #rb {
     left: 0; 
   }
 }
