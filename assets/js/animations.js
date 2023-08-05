@@ -28,12 +28,12 @@ let starsDeg = 0;
 let moonY = 0;
 let moonScale = 1;
 
-const floorY = 2.3;
-const rbX = 6.8;
-const rfX = 9;
-const lbX = -6.1;
-const lf1X = -7.6;
-const lf2x = -9;
+const floorY = 1.5;
+const rbX = 4;
+const rfX = 3.4;
+const lbX = -5.5;
+const lf1X = -6;
+const lf2X = -3.4;
 
 // initialize fullPage
 new fullpage('#fullpage', {
@@ -73,30 +73,30 @@ new fullpage('#fullpage', {
         // main page
         if (n != 0) {
             // only play starfall on first slide
-            hideStarfallAnimations();
             pauseStarfallAnimations();
+            hideStarfallAnimations();
 
             // mountain parallax effect
-            floor.style.transform = 'translateY(' + floorY + 'vh)';
+            floor.style.transform = 'translateY(' + floorY + '%)';
             
-            rb.style.transform = 'translateX(' + rbX + 'vh)';
-            rf.style.transform = 'translateX(' + rfX + 'vh)';
+            rb.style.transform = 'translateX(' + rbX + '%)';
+            rf.style.transform = 'translateX(' + rfX + '%)';
 
-            lb.style.transform = 'translateX(' + lbX + 'vh)';
-            lf1.style.transform = 'translateX(' + lf1X + 'vh)';
-            lf2.style.transform = 'translateX(' + lf2x + 'vh)';
+            lb.style.transform = 'translateX(' + lbX + '%)';
+            lf1.style.transform = 'translateX(' + lf1X + '%)';
+            lf2.style.transform = 'translateX(' + lf2X + '%)';
         } else {
-            showStarfallAnimations();
             resumeStarfallAnimations();
+            showStarfallAnimations();
 
-            floor.style.transform = 'translateY(' + 0 + 'vh)';
+            floor.style.transform = 'translateY(' + 0 + '%)';
             
-            rb.style.transform = 'translateX(' + 0 + 'vh)';
-            rf.style.transform = 'translateX(' + 0 + 'vh)';
+            rb.style.transform = 'translateX(' + 0 + '%)';
+            rf.style.transform = 'translateX(' + 0 + '%)';
 
-            lb.style.transform = 'translateX(' + 0 + 'vh)';
-            lf1.style.transform = 'translateX(' + 0 + 'vh)';
-            lf2.style.transform = 'translateX(' + 0 + 'vh)';
+            lb.style.transform = 'translateX(' + 0 + '%)';
+            lf1.style.transform = 'translateX(' + 0 + '%)';
+            lf2.style.transform = 'translateX(' + 0 + '%)';
         }
           
         // Reset all slide content animations

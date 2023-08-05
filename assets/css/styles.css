@@ -37,7 +37,7 @@ body {
   height: 100%;
   overflow: visible;
   object-fit: cover;
-  transition: left 2s ease-in-out, transform 2.2s ease-in-out;
+  transition: object-position 0.1s ease-in-out, transform 2.2s ease-in-out;
 }
 
 #moon {
@@ -435,23 +435,23 @@ p {
 
   /* parallax shift */
   #parallax-bg #lf1 {
-    left: 15vh;
+    object-position: 41%;
   }
 
   #parallax-bg #lf2 {
-    left: 21vh;
-  }
-
-  #parallax-bg #rf {
-    left: -20vh;
+    object-position: 32%;
   }
 
   #parallax-bg #lb {
-    left: 13vh;
+    object-position: 40%;
+  }
+
+  #parallax-bg #rf {
+    object-position: 64%;
   }
 
   #parallax-bg #rb {
-    left: -13vh;
+    object-position: 60%;
   }
 }
 
@@ -474,23 +474,23 @@ p {
 
   /* parallax shift */
   #parallax-bg #lf1 {
-    left: 16vh;
+    object-position: 39%;
   }
 
   #parallax-bg #lf2 {
-    left: 36vh;
-  }
-
-  #parallax-bg #rf {
-    left: -33vh;
+    object-position: 29%;
   }
 
   #parallax-bg #lb {
-    left: 20vh;
+    object-position: 39%;
+  }
+
+  #parallax-bg #rf {
+    object-position: 68%;
   }
 
   #parallax-bg #rb {
-    left: -18vh;
+    object-position: 64%;
   }
   
 }
@@ -502,7 +502,7 @@ p {
   #parallax-bg #rf, 
   #parallax-bg #lb, 
   #parallax-bg #rb {
-    left: 0; 
+    object-position: 0;
   }
 }
 
