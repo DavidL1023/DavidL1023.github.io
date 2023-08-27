@@ -667,13 +667,13 @@ p {
   animation-name: reveal-david;
   animation-duration: 4s;
   animation-delay: 1.5s;
-  transform: translateX(-31%);
+  transform: translateX(-28%);
   animation-fill-mode: forwards;
 }
 
 @keyframes reveal-david {
   0% {
-    transform: translateX(-31%);
+    transform: translateX(-28%);
   }
   100% {
     transform: translateX(0);
