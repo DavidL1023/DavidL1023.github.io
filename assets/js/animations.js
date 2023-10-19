@@ -42,7 +42,7 @@ new fullpage('#fullpage', {
     anchors: ['home', 'about', 'skills', 'projects', 'contact'],
     menu: '#navbar .menu',
     fixedElements: '#navbar',
-    scrollingSpeed: 1800,
+    scrollingSpeed: 1600,
     scrollOverflow: false,
     loopHorizontal: false,
     slidesNavigation: true,
