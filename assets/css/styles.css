@@ -130,7 +130,7 @@ body {
 }
 
 /* Header */
-li, a {
+li a {
   font-size: 1.05rem;
   color: var(--text-color);
   text-decoration: none;
