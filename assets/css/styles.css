@@ -129,6 +129,54 @@ body {
   animation-duration: 6.8s;
 }
 
+/* Text backdrop */
+.text-container {
+  position: relative;
+}
+
+.zigzag-page2 {
+  position: absolute;
+  top: -18vh;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+  opacity: 70%;
+}
+
+.zigzag-page3 {
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+  opacity: 70%;
+}
+
+.zigzag-page4 {
+  position: absolute;
+  top: -18vh;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+  opacity: 70%;
+}
+
+.zigzag-text {
+  position: relative;
+  text-shadow: 3px 4px 7px rgba(163, 163, 163, 0.8);
+  z-index: 1; /* Ensures the text is above the zigzag */
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.zigzag-text ul {
+  list-style-position: inside;
+}
+
+
 /* Header */
 li a {
   font-size: 1.05rem;
