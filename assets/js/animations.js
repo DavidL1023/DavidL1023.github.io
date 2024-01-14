@@ -30,9 +30,9 @@ let moonScale = 1;
 
 const floorY = 1.5;
 const rbX = 4;
-const rfX = 3.4;
-const lbX = -5.5;
-const lf1X = -6;
+const rfX = 4;
+const lbX = -10;
+const lf1X = -10;
 const lf2X = -3.4;
 
 // initialize fullPage
