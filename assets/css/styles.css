@@ -146,7 +146,7 @@ body {
 
 .zigzag-page3 {
   position: absolute;
-  top: -10vh;
+  top: -12vh;
   left: 0;
   width: 100%;
   height: 600px;
@@ -166,7 +166,7 @@ body {
 
 .zigzag-text {
   position: relative;
-  text-shadow: 3px 4px 7px rgba(163, 163, 163, 0.8);
+  text-shadow: 3px 4px 7px rgba(182, 180, 180, 0.8);
   z-index: 1; /* Ensures the text is above the zigzag */
   padding-left: 1em;
   padding-right: 1em;
