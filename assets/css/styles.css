@@ -204,7 +204,7 @@ a:hover {
   color: var(--hover-color);
 }
 
-.email-btn button {
+.email-btn {
   padding: 0.6em 0.9em;
   background-color: rgba(255, 165, 0, 1);
   border: none;
@@ -215,17 +215,18 @@ a:hover {
   transition: all 0.3s ease-out;
 }
 
-.email-btn button:hover {
+.email-btn:hover {
+  color: var(--text-color);
   scale: 1.05;
 }
 
-.email-btn button:active {
+.email-btn:active {
   background-color: rgba(255, 165, 0, 0.8);
   scale: 0.95;
 }
 
 @media (min-width: 1921px) { /* sizes for larger than normal screen*/
-  .email-btn button {
+  .email-btn {
     font-size: 0.95rem;
   }
 
@@ -279,7 +280,7 @@ a:hover {
   justify-content: center;
 }
 
-.dropdown-menu .email-btn button {
+.dropdown-menu .email-btn {
   width: 100%;
   max-width: 19em;
   display: flex;
@@ -396,7 +397,7 @@ a:hover {
 }
 
 .detail-btn {
-  padding: 1em 1.3em;
+  padding: 0.9em 1.2em;
   background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 50px;
@@ -405,7 +406,7 @@ a:hover {
   color: #2E2E2E;
   cursor: pointer;
   transition: all 0.3s ease-out;
-  margin-top: 3vh;
+  margin-top: 1.5vh;
 }
 
 .detail-btn:hover {
@@ -415,6 +416,42 @@ a:hover {
 .detail-btn:active {
   background-color: rgba(255, 165, 0, 0.8);
   scale: 0.95;
+}
+
+.programming-languages {
+  display: flex;
+  padding-top: 1vh;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.programming-languages img {
+  width: 50px;
+  height: auto;
+}
+
+#send-email-btn {
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) { /* small screen */
+  .detail-btn {
+    font-size: 0.9rem;
+  }
+
+  #send-email-btn {
+    font-size: 0.9rem;
+  }
+  
+  .programming-languages img {
+    width: 40px;
+  }
+}
+
+@media (min-width: 1921px) { /* larger than normal screen */
+  .programming-languages img {
+    width: 60px;
+  }
 }
 
 /* Text sizes */
