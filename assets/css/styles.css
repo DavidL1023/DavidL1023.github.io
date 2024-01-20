@@ -410,6 +410,7 @@ a:hover {
 }
 
 .detail-btn:hover {
+  color: #2E2E2E;
   scale: 1.05;
 }
 
@@ -794,3 +795,5 @@ p {
     opacity: 0;
   }
 }
+
+/* Show More html pages */
