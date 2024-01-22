@@ -419,6 +419,20 @@ a:hover {
   scale: 0.95;
 }
 
+.button-gif-container {
+  position: relative;
+  display: inline-block; /* or flex, depending on your layout */
+}
+
+.overlay-gif {
+  position: absolute;
+  top: 95%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 80px; /* Adjust based on your preference */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .programming-languages {
   display: flex;
   padding-top: 1vh;
@@ -441,17 +455,37 @@ a:hover {
   }
 
   #send-email-btn {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   
   .programming-languages img {
     width: 40px;
   }
+
+  .overlay-gif {
+    width: 50px;
+    top: 90%;
+    left: 95%;
+  }
 }
 
 @media (min-width: 1921px) { /* larger than normal screen */
+  .detail-btn {
+    font-size: 1.5rem;
+  }
+
+  #send-email-btn {
+    font-size: 1.2rem;
+  }
+
   .programming-languages img {
     width: 60px;
+  }
+
+  .overlay-gif {
+    width: 100px;
+    top: 96%;
+    left: 99%;
   }
 }
 
@@ -795,5 +829,3 @@ p {
     opacity: 0;
   }
 }
-
-/* Show More html pages */
