@@ -143,7 +143,6 @@ body {
 
 .zigzag-text, .zigzag-text ul li {
   position: relative;
-  text-shadow: 3px 4px 7px rgba(189, 189, 189, 0.8);
 }
 
 .zigzag-text ul {
